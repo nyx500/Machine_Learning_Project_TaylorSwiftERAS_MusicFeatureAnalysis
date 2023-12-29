@@ -1,0 +1,6 @@
+Metric,Score
+accuracy,0.597121212121212
+balanced_accuracy,0.4601213180758635
+precision_micro,0.597121212121212
+recall_micro,0.597121212121212
+f1_micro,0.597121212121212

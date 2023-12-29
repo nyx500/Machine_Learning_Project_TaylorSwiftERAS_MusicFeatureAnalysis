@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="acousticness <= 0.31\nentropy = 3.221\nsamples = 397\nvalue = [56, 43, 7, 12, 45, 55, 59, 8, 24, 48, 40]", fillcolor="#fdfeff"] ;
+1 [label="loudness <= -5.36\nentropy = 2.796\nsamples = 238\nvalue = [48, 31, 2, 6, 19, 48, 42, 7, 0, 0, 35]", fillcolor="#ffffff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="speechiness <= 0.034\nentropy = 2.547\nsamples = 153\nvalue = [42, 12, 0, 4, 19, 42, 8, 2, 0, 0, 24]", fillcolor="#ffffff"] ;
+1 -> 2 ;
+3 [label="entropy = 2.117\nsamples = 50\nvalue = [3, 9, 0, 0, 0, 24, 6, 2, 0, 0, 6]", fillcolor="#b7edf5"] ;
+2 -> 3 ;
+4 [label="entropy = 2.301\nsamples = 103\nvalue = [39, 3, 0, 4, 19, 18, 2, 0, 0, 0, 18]", fillcolor="#f9e1d0"] ;
+2 -> 4 ;
+5 [label="entropy = 2.429\nsamples = 85\nvalue = [6, 19, 2, 2, 0, 6, 34, 5, 0, 0, 11]", fillcolor="#d2def9"] ;
+1 -> 5 ;
+6 [label="instrumentalness <= 0.0\nentropy = 2.94\nsamples = 159\nvalue = [8, 12, 5, 6, 26, 7, 17, 1, 24, 48, 5]", fillcolor="#fbdef2"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="entropy = 3.13\nsamples = 77\nvalue = [7, 11, 5, 2, 3, 5, 15, 1, 7, 16, 5]", fillcolor="#fffcfe"] ;
+6 -> 7 ;
+8 [label="entropy = 2.144\nsamples = 82\nvalue = [1, 1, 0, 4, 23, 2, 2, 0, 17, 32, 0]", fillcolor="#fbe1f3"] ;
+6 -> 8 ;
+}
