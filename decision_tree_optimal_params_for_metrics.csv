@@ -1,7 +1,7 @@
 accuracy,balanced_accuracy,precision_micro,recall_micro,f1_micro
 0.1,0.1,0.1,0.1,0.1
 entropy,entropy,entropy,entropy,entropy
-3,3,3,3,3
+4,4,4,4,4
 6,6,6,6,6
 1,1,1,1,1
 2,2,2,2,2
