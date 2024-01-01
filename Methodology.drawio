@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T19:21:17.756Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="kezw5WwBFGgIuwQ1KiGi" version="22.1.16" type="device">
+  <diagram id="8gwn59tTGgLb2JZWvEo5" name="Page-1">
+    <mxGraphModel dx="1500" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-1" value="Import the dataset and explore its size and structure using &lt;i&gt;pandas &lt;/i&gt;and visualization libraries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="314" y="10" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-2" value="Based on exploration results, extract the relevant features and create a features matrix (audio characteristics) and target array (album names)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="260" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-4" value="Normalize the features using z-scaling to reduce risk of large-scaled features being overly influential" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.458;entryY=-0.022;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="300" as="sourcePoint" />
+            <mxPoint x="420" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-8" value="K-Nearest Neighbour" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="PNO1lEyl7OUFAKU9HKYe-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PNO1lEyl7OUFAKU9HKYe-10" target="PNO1lEyl7OUFAKU9HKYe-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-10" value="Run inner loops of nested cross-validation using the model to ascertain optimal value of hyperparameter &lt;i&gt;k&lt;/i&gt;." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="630" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-11" value="Use cross-validation to run the model for &lt;i&gt;n&lt;/i&gt;&amp;nbsp;folds based on the optimal parameters returned from the inner loop of the nested cross-validation function" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="870" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.472;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PNO1lEyl7OUFAKU9HKYe-12" target="PNO1lEyl7OUFAKU9HKYe-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-12" value="Run outer loops of cross-validation to train and test the model with optimal value of &lt;i&gt;k&lt;/i&gt;&amp;nbsp;returned by the inner loop." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="750" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-17" value="Implement the algorithm from scratch using NumPy, using Gaussian density function to calculate likelihoods." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="330" y="410" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-18" value="Implement the k-NN algorithm from scratch with NumPy using Euclidian distance function." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="520" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="480" as="sourcePoint" />
+            <mxPoint x="210" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="600" as="sourcePoint" />
+            <mxPoint x="210" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="340" as="sourcePoint" />
+            <mxPoint x="510" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-22" value="Naive-Bayes Classifier" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="PNO1lEyl7OUFAKU9HKYe-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-23" value="Use simple cross-validation to avoid overfitting (not nested, as no hyperparameters to tune)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="330" y="520" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.533;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="480" as="sourcePoint" />
+            <mxPoint x="460" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-25" value="Import the scikit-learn DecisionTreeClassifier model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="500" y="410" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-27" value="Optimize hyperparameters using scikit-learn&#39;s GridSearchCV feature" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="514" y="520" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-28" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="300" as="sourcePoint" />
+            <mxPoint x="620" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-29" value="Decision Tree" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="PNO1lEyl7OUFAKU9HKYe-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-30" value="Pre-process the data so that it is suitable for machine learning (e.g. combine re-releases of same album into one class)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="320" y="130" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-31" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="90" as="sourcePoint" />
+            <mxPoint x="410" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-32" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.455;entryY=0.022;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="190" as="sourcePoint" />
+            <mxPoint x="460" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.402;entryY=0.029;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PNO1lEyl7OUFAKU9HKYe-25" target="PNO1lEyl7OUFAKU9HKYe-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="480" as="sourcePoint" />
+            <mxPoint x="650" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-35" value="Use simple cross-validation to run Decision Tree &lt;i&gt;n &lt;/i&gt;times using the optimal hyperparameters discovered using GridSearchCV." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="500" y="610" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-36" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.315;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="PNO1lEyl7OUFAKU9HKYe-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="600" as="sourcePoint" />
+            <mxPoint x="561" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-38" value="Import tthe RandomForestClassifier from scikit-learn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="664" y="410" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-39" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.367;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="290" as="sourcePoint" />
+            <mxPoint x="620" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-40" value="Random Forest" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="PNO1lEyl7OUFAKU9HKYe-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-42" value="Optimize hyperparameters using GridSearchCV" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="677" y="520" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-43" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="480" as="sourcePoint" />
+            <mxPoint x="740" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-44" value="Initialize a RandomForest classifier and train it on the training set, then test it on the test data once." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="677" y="630" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-45" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.422;entryY=0.026;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="590" as="sourcePoint" />
+            <mxPoint x="790" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PNO1lEyl7OUFAKU9HKYe-46" target="PNO1lEyl7OUFAKU9HKYe-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-46" value="Create confusion matrices for each set of predictions (and for each &#39;fold&#39;, if applicable)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1000" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PNO1lEyl7OUFAKU9HKYe-48" target="PNO1lEyl7OUFAKU9HKYe-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-48" value="Use scikit-learn&#39;s &lt;i&gt;classification_report&lt;/i&gt;&amp;nbsp;to compute the accuracy, precision, recall and f1 scores for each time a model predicts a set of labels." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1100" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PNO1lEyl7OUFAKU9HKYe-50" target="PNO1lEyl7OUFAKU9HKYe-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-50" value="Create a report containing the average accuracy, precision, recall etc. for each classifier based on the results from every fold, if applicable." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1200" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-51" value="Compile these average classification reports for every model into one multi-indexed &lt;i&gt;pandas&lt;/i&gt;&amp;nbsp;DataFrame (using the model&#39;s name, e.g. &lt;i&gt;Naive Bayes&lt;/i&gt;&amp;nbsp;as the outer index) to enable comparisons between the models&#39; performance." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1300" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-52" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.34;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="950" as="sourcePoint" />
+            <mxPoint x="300" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.409;entryY=-0.068;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PNO1lEyl7OUFAKU9HKYe-23" target="PNO1lEyl7OUFAKU9HKYe-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-57" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="700" as="sourcePoint" />
+            <mxPoint x="610" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-58" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.592;entryY=-0.068;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="700" as="sourcePoint" />
+            <mxPoint x="790" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-63" value="Compare how well each model performed in terms of classifying individual albums, as well as overall." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1400" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PNO1lEyl7OUFAKU9HKYe-64" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="PNO1lEyl7OUFAKU9HKYe-63">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="1360" as="sourcePoint" />
+            <mxPoint x="500" y="1310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
